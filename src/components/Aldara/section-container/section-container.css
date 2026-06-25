@@ -1,0 +1,36 @@
+.section-container {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  padding: 20px;
+}
+
+.section-content {
+  width: 100%;
+  height: 100%;
+  border-color: black;
+}
+
+.border-dotted {
+  border-style: dotted;
+}
+
+.border-dashed {
+  border-style: dashed;
+}
+
+.border-default {
+  border-style: solid;
+}
+
+.border-double {
+  border-style: double;
+}
+
+.border-inset {
+  border-style: inset;
+}
+
+.border-outset {
+  border-style: outset;
+}

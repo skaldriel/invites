@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Yesteryear&display=swap');
+
 :root{
   --blue: #287bff;
   --white: #fff;
@@ -6,8 +8,6 @@
   --black2: #999;
   --bgColor: #999dfc;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Yesteryear&display=swap');
 
 
 ul{

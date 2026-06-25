@@ -8,11 +8,11 @@ const Digit = ({ textDigit, textDescription }) => {
   };
   return (
     <div className="centerItem">
-      <p style={{ margin: "0" }} className=" bauptism digit g-shadow">
+      <p style={{ margin: "0" }} className=" bb-shower digit a-shadow">
         {formatDigit(textDigit)}
       </p>
       <p
-        className="g-shadow bauptism"
+        className="bb-shadow bb-shower"
         style={{ fontSize: "14px", margin: "0" }}
       >
         {textDescription}

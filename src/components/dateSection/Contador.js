@@ -3,7 +3,7 @@ import Digit from "./Digit/Digit";
 import DigitSeparator from "./DigitSeparator/DigitSeparator";
 import "./Contador.css";
 
-const Contador = () => {
+const Contador = ({ style }) => {
   const [left, setLeft] = useState("");
   const [leftDays, setLeftDays] = useState("");
   const [leftHours, setLeftHours] = useState("");
@@ -13,7 +13,7 @@ const Contador = () => {
   // Date.UTC(year, monthIndex, day, hour, minute, second, millisecond)
   useEffect(() => {
     const actualDate = new Date();
-    const partyDate = new Date(Date.UTC(2023, 10, 18, 9, 30, 0, 0));
+    const partyDate = new Date(Date.UTC(2026, 6, 11, 14, 0, 0, 0));
 
     partyDate.setHours(partyDate.getHours() + 6);
     const interval = setInterval(() => {
@@ -35,7 +35,7 @@ const Contador = () => {
   }, [left]);
 
   return (
-    <div className="counter-container" style={{ color: "#93B9E2" }}>
+    <div className="counter-container" style={{ color: "#662e50", ...style }}>
       <Digit textDigit={leftDays < 1 ? 0 : leftDays} textDescription="Días" />
       <DigitSeparator />
       <Digit

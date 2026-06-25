@@ -1,0 +1,47 @@
+.backdrop-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(7px);
+}
+
+.backdrop-children {
+  width: 40%;
+  max-width: 420px;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 970px) {
+  .backdrop-children {
+    width: 50%;
+  }
+}
+
+@media (max-width: 720px) {
+  .backdrop-children {
+    width: 70%;
+  }
+}
+
+@media (max-width: 520px) {
+  .backdrop-children {
+    width: 100%;
+  }
+}

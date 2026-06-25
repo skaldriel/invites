@@ -9,6 +9,8 @@ import Admin from "./pages/Admin";
 import AzielBby from "./pages/AzielBby";
 import Envelope from "./components/envelop/Envelope";
 import Bautizo from "./components/Bautizo/Bautizo";
+import Aldara from "./components/Aldara";
+
 function App() {
   const [refetch, setRefetch] = useState(true);
   const [eventInformation, setEventInformation] = useState(null);
@@ -20,7 +22,7 @@ function App() {
   useEffect(() => {
     if (refetch) {
       fetch(
-        "https://wenvel-backend-dev-gdgs.1.us-1.fl0.io/api/v1/events/1/information"
+        "https://wenvel-backend-dev-gdgs.1.us-1.fl0.io/api/v1/events/1/information",
       )
         .then((response) => response.json())
         .then((data) => {
@@ -59,11 +61,11 @@ function App() {
         {/* <Route path="/dashboard" element={<Dashboard guests={eventGuest}/>} /> */}
         {/* <Route path="/andretti/dashboard" element={<Dashboard guests={andrettiGuest}/>} /> */}
         {/* {
-            andrettiGuest.map((guest) => 
-                  <Route 
-                    path={`/andretti/${guest.id}`} 
+            andrettiGuest.map((guest) =>
+                  <Route
+                    path={`/andretti/${guest.id}`}
                     element={
-                      <BautizoAndreti 
+                      <BautizoAndreti
                         firstname={guest.firstname}
                         lastname={guest.lastname}
                         confirmation={guest.confirmation}
@@ -71,15 +73,15 @@ function App() {
                         loading={loading}
                         setSpiner={setLoading}
                       />
-                    }  
-                    key={guest.id} 
+                    }
+                    key={guest.id}
                   />
             )
           } */}
         {/* {
             eventGuest.map((guest, i) =>
-                  <Route 
-                    path={`/camila/${guest.id}`} 
+                  <Route
+                    path={`/camila/${guest.id}`}
                     element={
                       <XVCamila
                         firstname={guest.firstname}
@@ -89,30 +91,27 @@ function App() {
                         loading={loading}
                         setSpiner={setLoading}
                       />
-                    }  
-                    key={i} 
+                    }
+                    key={i}
                   />
             )
           } */}
 
         <Route path="/envelope" element={<Envelope />} />
 
-        {eventInformation?.guests.map((guest, i) => (
-          <Route
-            path={`/aziel-bautizo/${guest.id}`}
-            element={
-              <Bautizo
-                firstname={guest.firstname}
-                lastname={guest.lastname}
-                confirmation={guest.confirmation}
-                id={guest.id}
-                loading={loading}
-                setSpiner={setLoading}
-                setRefetch={setRefetch}
-              />
-            }
-          />
-        ))}
+        <Route
+          path={`/aziel-bautizo`}
+          element={
+            <Bautizo
+              firstname="Ian"
+              lastname="Rosas"
+              confirmation={true}
+              id={5}
+              loading={loading}
+              setSpiner={setLoading}
+            />
+          }
+        />
         <Route
           path="/aziel-bby-shower"
           element={
@@ -121,6 +120,19 @@ function App() {
               lastname="Rosas"
               confirmation={false}
               id={234}
+              loading={loading}
+              setSpiner={setLoading}
+            />
+          }
+        />
+        <Route
+          path="/aldara"
+          element={
+            <Aldara
+              firstname="Ian"
+              lastname="Rosas"
+              confirmation={false}
+              id={1}
               loading={loading}
               setSpiner={setLoading}
             />

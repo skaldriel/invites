@@ -1,0 +1,102 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Great Vibes", cursive;
+}
+
+p,
+button,
+input {
+  font-family: "MuseoModerno", sans-serif;
+}
+
+.large {
+  font-size: 48px;
+}
+
+.medium {
+  font-size: 32px;
+}
+
+.small {
+  font-size: 24px;
+}
+
+.text {
+  font-size: 18px;
+}
+
+.ba-gold {
+  color: #f7bb60;
+}
+
+.bb-pink {
+  color: #d8aac5;
+}
+
+.ba-yellow {
+  color: #ffce3a;
+}
+
+.g-shadow {
+  text-shadow: 2px 2px 4px #d8c084;
+}
+
+.bb-shadow {
+  text-shadow: 2px 2px 4px #f2cccb;
+}
+
+.p-shadow {
+  text-shadow: 2px 2px 4px rgba(93, 113, 126, 0.82);
+}
+
+.a-shadow {
+  text-shadow: 2px 2px 10px #fff;
+}
+
+.center-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.top {
+  top: 0;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.confirmButton {
+  background-color: #f2cccb;
+  color: #662e50;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.confirmButton:hover {
+  cursor: pointer;
+  background: #d8c084;
+  color: #403320;
+  transition: 0.5s;
+  transform: scale(1.1);
+}
