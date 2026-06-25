@@ -3,7 +3,22 @@ import ornament from "../../../../../img/aldara/pink-ornament.png";
 import angel from "../../../../../img/aldara/penguin-2.png";
 import "./welcome-ornaments.css";
 
-function WelcomeOrnaments({ children }) {
+function WelcomeOrnaments({ children, noOrnaments }) {
+  if (noOrnaments)
+    return (
+      <div className="positionOrnament">
+        <div className="horizontal-ornament bottom right-50 i-1">
+          <div className="center-image">
+            <img
+              src={angel}
+              className="img-shadow"
+              style={{ width: "236px" }}
+            />
+          </div>
+        </div>
+        {children}
+      </div>
+    );
   return (
     <div className="positionOrnament">
       <div className="horizontal-ornament top">

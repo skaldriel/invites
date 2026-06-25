@@ -1,9 +1,6 @@
-import React from "react";
 import "./hero.css";
 import angel from "../../../../img/aldara/penguin.png";
-import pila from "../../../../img/bautizo/pila-bautismo.png";
 import corner from "../../../../img/aldara/pink-corner.png";
-import bg from "../../../../img/aldara/pink-texture.jpg";
 
 function Hero() {
   return (
@@ -25,27 +22,6 @@ function Hero() {
       </div>
       <div className="hero-pila pa0">
         <div className="center-image"></div>
-      </div>
-      <div className="corner top left">
-        <img
-          src={corner}
-          style={{ width: "100%", transform: "rotate(180deg)" }}
-        />
-      </div>
-      <div className="corner top right">
-        <img
-          src={corner}
-          style={{ width: "100%", transform: "rotate(270deg)" }}
-        />
-      </div>
-      <div className="corner bottom right">
-        <img src={corner} style={{ width: "100%" }} />
-      </div>
-      <div className="corner bottom left">
-        <img
-          src={corner}
-          style={{ width: "100%", transform: "rotate(90deg)" }}
-        />
       </div>
     </div>
   );

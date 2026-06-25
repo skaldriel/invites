@@ -4,7 +4,7 @@ import "./welcome.css";
 function Welcome({ name }) {
   return (
     <>
-      <WelcomeOrnaments>
+      <WelcomeOrnaments noOrnaments>
         <div className="welcome-container">
           <h2 className="bb-shower center bb-shadow">Familia Rosas Ramos</h2>
           <p className="text center bb-shadow" style={{ lineHeight: "0.5" }}>

@@ -35,30 +35,6 @@ export default function PlaceSection({
           link={link}
           buttonStyles={buttonStyles}
         />
-        <div
-          className={`corner top ${inverted ? "right" : "left"}`}
-          style={{ width: "150px" }}
-        >
-          <img
-            src={corner}
-            style={{
-              width: "100%",
-              transform: `${inverted ? "rotate(90deg)" : "rotate(180deg)"}`,
-            }}
-          />
-        </div>
-        <div
-          className={`corner bottom ${inverted ? "left" : "right"}`}
-          style={{ width: "150px", margin: "0 -20px 0 0" }}
-        >
-          <img
-            src={corner}
-            style={{
-              width: "100%",
-              transform: `${inverted ? "rotate(270deg)" : "rotate(0deg)"}`,
-            }}
-          />
-        </div>
       </div>
     </>
   );

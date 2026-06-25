@@ -7,7 +7,10 @@ import DateCard from "./sections/date/Date";
 import PlaceSection from "./sections/places/PlaceSection";
 import location from "../../img/aldara/location.png";
 import sectionBg from "../../img/bautizo/byebg.jpeg";
-import bg from "../../img/aldara/aldara1.jpeg";
+import bg from "../../img/aldara/aldara0.jpeg";
+import bgAldara from "../../img/aldara/bgAldara.jpeg";
+import bgFam from "../../img/aldara/bgFam.jpeg";
+import bgBye from "../../img/aldara/bgBye.jpeg";
 import Page from "../Page";
 import welcomeImage from "../../img/aldara/pink-texture.jpg";
 import Carousel from "./Carousel";
@@ -31,19 +34,13 @@ function Bautizo({
       title={`Invitación ${firstname}`}
       description={`Hola ${firstname} nos complace invitarte al bautizo de nuestro hijo: Aziel Eduardo`}
     >
-      <SectionContainer withBgImage img={welcomeImage}>
+      <SectionContainer withBgImage img={bgAldara}>
         <Hero />
       </SectionContainer>
-      <SectionContainer bgColor="#fdfafb">
+      <SectionContainer bgColor="#fdfafb" withBgImage img={bgFam}>
         <Welcome name={`${firstname} ${lastname}`} />
       </SectionContainer>
-      <SectionContainer
-        withBgImage
-        img={bg}
-        noBorder
-        bgColor="transparent"
-        blurred
-      >
+      <SectionContainer withBgImage img={bg} noBorder bgColor="transparent">
         <DateCard
           guestId={id}
           confirmation={confirmation}
@@ -55,7 +52,7 @@ function Bautizo({
           hide
         />
       </SectionContainer>
-      <SectionContainer bgColor="#fdfafb">
+      <SectionContainer bgColor="#fdfafb" withBgImage img={bgAldara}>
         <PlaceSection
           heading="Ubicación"
           image={location}
@@ -67,7 +64,7 @@ function Bautizo({
         />
       </SectionContainer>
 
-      <SectionContainer withBgImage img={welcomeImage}>
+      <SectionContainer withBgImage img={bgBye}>
         <div
           style={{
             width: "100%",
