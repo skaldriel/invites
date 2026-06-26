@@ -58,7 +58,7 @@ function Bautizo({
           image={location}
           name="Salón de eventos el almendro"
           address="C. Pedro Moreno, Sascalum, 24095 San Francisco de Campeche, Camp."
-          hour="2:00 pm"
+          hour="2:30 pm"
           link="https://maps.app.goo.gl/qhgYyp2BuBWjkey56"
           buttonStyles="confirmButton"
         />
