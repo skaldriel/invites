@@ -19,6 +19,17 @@ function App() {
   // const [andrettiGuest, setAndrettiGuest] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  const users = [
+    { id: 1, name: "Edith", lastName: "Ramos" },
+    { id: 2, name: "Rossana", lastName: "Maldonado" },
+    { id: 3, name: "Giovanna", lastName: "Gómez" },
+    { id: 4, name: "Familia", lastName: "Pech" },
+    { id: 5, name: "Sharon", lastName: "" },
+    { id: 6, name: "Sara", lastName: "Garcia" },
+    { id: 7, name: "Yanitzi", lastName: "Quiñones" },
+    { id: 8, name: "Milton", lastName: "Rojas" },
+  ];
+
   useEffect(() => {
     if (refetch) {
       fetch(
@@ -125,19 +136,21 @@ function App() {
             />
           }
         />
-        <Route
-          path="/aldara"
-          element={
-            <Aldara
-              firstname="Ian"
-              lastname="Rosas"
-              confirmation={false}
-              id={1}
-              loading={loading}
-              setSpiner={setLoading}
-            />
-          }
-        />
+        {users.map((user) => (
+          <Route
+            path={`/aldara/${user.id}`}
+            element={
+              <Aldara
+                firstname={user.name}
+                lastname={user.lastName}
+                confirmation={false}
+                id={1}
+                loading={loading}
+                setSpiner={setLoading}
+              />
+            }
+          />
+        ))}
       </Routes>
     </BrowserRouter>
   );
