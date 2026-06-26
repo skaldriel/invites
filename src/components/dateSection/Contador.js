@@ -13,7 +13,7 @@ const Contador = ({ style }) => {
   // Date.UTC(year, monthIndex, day, hour, minute, second, millisecond)
   useEffect(() => {
     const actualDate = new Date();
-    const partyDate = new Date(Date.UTC(2026, 6, 11, 14, 0, 0, 0));
+    const partyDate = new Date(Date.UTC(2026, 6, 11, 14, 30, 0, 0));
 
     partyDate.setHours(partyDate.getHours() + 6);
     const interval = setInterval(() => {
